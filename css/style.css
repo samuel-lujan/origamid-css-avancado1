@@ -1,9 +1,3 @@
-/* BREAKPOINTS 
-960
-740
-*/
-
-
 /* Reset */
 body, h1, h2, h3, p, ul {
     padding :0px;
@@ -33,8 +27,8 @@ body{
 
 .menu-container::after, .menu-container::before{
     content: '';
+    display: table;
     clear: both;
-    display: block;
 }
 
 a.menu-logo{
@@ -61,19 +55,16 @@ a.menu-logo{
 }
 
 @media (max-width: 739px){
+    .menu {
+        text-align: center;
+    }
+    a.menu-logo {
+        float: none;
+        margin: 0 auto;
+    }
     .menu-nav{
         float: none;
         clear: both;
-        align-items: center;
-        display: inline-block;
-    }
-    .menu-container::after, .menu-container::before{
-        content: '';
-        display: table;
-        clear: both;
-    }
-    .menu-nav{
-        float: right;
     }
 }
 
@@ -165,24 +156,6 @@ a.menu-logo{
     text-align: center;
     margin: 20px auto;
     max-width: 460px;
-}
-@media (min-width: 740) and (max-width: 980px){
-    .sobre-container{
-        max-width: 720px;
-    }
-    .sobre-item{
-        width: 34s0px;
-    }
-}
-@media (max-width: 739px){
-    .sobre-container{
-        max-width: 300px;
-    }
-
-    .sobre-item{
-        max-width: 300px;
-        margin: 0;
-    }
 }
 
 /*PRODUTOS*/
@@ -340,10 +313,9 @@ h2.produtos-mineiro::before{
 @media (min-width: 740) and (max-width: 980px){
     .locais{
         max-width: 720px;
-        
     }
     .locais-item > div, .locais-item img{
-        width: 300px;
+        width: 340px;
     }
 }
 @media (max-width: 739px){
@@ -423,6 +395,30 @@ h2.produtos-mineiro::before{
     cursor: pointer;
 }
 
+@media (min-width: 740) and (max-width: 980px){
+    .assine-container{
+        max-width: 720px;
+    }
+    .assine-info{
+        width: 340px;
+    }
+    .assine form{
+        width: 340px;
+    }
+    .assine input {
+        width: 340px;
+    }
+}
+@media (max-width: 739px){
+    .assine-container{
+        max-width: 300px;
+    }
+    .assine-info, .assine form, .assine input {
+        width: 300px;
+        margin: 10px 0 0 0;
+    }
+}
+
 .footer{
     background: #d6d3c8;
     padding: 40px 0;
@@ -450,4 +446,19 @@ footer img {
     float: right;
     margin: 0 10px;
     display: block;
+}
+@media (max-width: 739px){
+   .footer-container{
+       max-width: 300px;
+   }
+
+   .footer p {
+       float: none;
+       margin: 0;
+   }
+
+   .footer img {
+       float: none;
+       margin: 10px 0;
+   }
 }
